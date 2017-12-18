@@ -5,5 +5,5 @@ from models import *
 urlpatterns = [
     url(r'^$', views.index),
     url(r'^welcome/(?P<user_id>\d+)$', views.welcome),
-    url(r'^(?P<action>\w+)', views.process),
+    url(r'^process/(?P<action>\w+)$', views.process),
 ]

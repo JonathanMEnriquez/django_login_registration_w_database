@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="wrapper">
-        <div id="reg_section">
+        <div class="top_center">
             <h1>Registration</h1>
             {% if messages %}
             <div class="error_box">
@@ -21,7 +21,7 @@
                 {% endfor %}
             </div>
             {% endif %}
-            <form action="/add" method="POST">
+            <form action="/process/add" method="POST">
                 {% csrf_token %}
                 <div class="leftside_form">
                     <p>First Name:</p>
@@ -40,11 +40,11 @@
                     <input type="date" class="input_field" name="dob">
                     <input type="password" class="input_field" name="password">
                     <input type="password" class="input_field" name="confirm_password"><br>
-                    <input type="submit" id="register_button" value="Register">
+                    <input type="submit" class="long_button" value="Register">
                 </div>
             </form>
         </div>
-        <div id="login_section">
+        <div class="bottom_center">
             <h1>Login</h1>
             {% if messages %}
                 {% for message in messages %}
@@ -55,7 +55,7 @@
                     {% endif %}
                 {% endfor %}
             {% endif %}
-            <form action="/login" method="POST">
+            <form action="/process/login" method="POST">
                 {% csrf_token %}
                 <div class="leftside_form">
                     <p id="email_login">Email / Username:</p>
@@ -64,7 +64,7 @@
                 <div class="rightside_form">
                     <input type="text" class="input_field" name="user_input">
                     <input type="password" class="input_field" name="password"><br>
-                    <input type="submit" name="Login" id="login_button">
+                    <input type="submit" name="Login" class="short_button">
                 </div>
         </div>
     </div>

@@ -25,7 +25,6 @@ class UserManager(models.Manager):
         return True
 
     def validateRegistration(self, postData):
-        # insert logic here
         response = {}
         if len(postData['first_name']) < 1 or len(postData['last_name']) < 1 or len(postData['email']) < 1 or len(postData['username']) < 1 or len(postData['password']) < 1:
             try:
@@ -62,7 +61,7 @@ class UserManager(models.Manager):
                 response['error'].append("Passwords must be at least 8 characters, including 1 lowercase, 1 uppercase, 1 special character, and 1 number")
             except:
                 response['error'] = []
-                response['error'].append("Passwords must be at least 8 characters, including 1 lowercase and 1 number")
+                response['error'].append("Passwords must be at least 8 characters, including 1 lowercase 1 uppercase, 1 special character, and 1 number")
         db_email_check = User.objects.filter(email = postData['email'])
         if len(db_email_check) > 0:
             try:

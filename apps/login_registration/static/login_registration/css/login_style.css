@@ -12,7 +12,7 @@
     padding: 20px;
 }
 
-#reg_section{
+.top_center{
     background-color: white;
     width: 55%;
     padding: 35px;
@@ -21,7 +21,7 @@
     margin-left: 20%;
 }
 
-#reg_section h1{
+.top_center h1{
     margin-bottom: 30px;
     font-size: 40px;
 }
@@ -61,7 +61,7 @@
     display: inline-block;
 }
 
-#register_button{
+.long_button{
     background-color: green;
     font-size: 17px;
     color: white;
@@ -88,7 +88,7 @@
 
 /* login section */
 
-#login_section{
+.bottom_center{
     background-color: white;
     width: 55%;
     padding: 35px;
@@ -97,7 +97,7 @@
     margin-left: 20%;
 }
 
-#login_section h1{
+.bottom_center h1{
     margin-bottom: 30px;
     font-size: 40px;
 }
